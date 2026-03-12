@@ -24,7 +24,7 @@ pipeline {
 
         stage('Push DockerHub') {
             steps {
-                sh 'docker login -u josemiguellealroman -pdckr_p at_aXD0cj8um9VIzftemD7Zv8dMoeI'
+                sh 'docker login -u josemiguellealroman -p TU_TOKEN'
                 sh 'docker push josemiguellealroman/flask-app:latest'
             }
         }
