@@ -5,7 +5,7 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git 'https://github.com/josemiguel-codex/proyecto-ci-cd-hiro.git'
+                checkout scm
             }
         }
 
@@ -24,7 +24,7 @@ pipeline {
 
         stage('Push DockerHub') {
             steps {
-                sh 'docker login -u TU_USUARIO -p TU_PASSWORD'
+                sh 'docker login -u josemiguellealroman -pdckr_p at_aXD0cj8um9VIzftemD7Zv8dMoeI'
                 sh 'docker push josemiguellealroman/flask-app:latest'
             }
         }
